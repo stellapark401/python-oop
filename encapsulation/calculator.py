@@ -33,12 +33,17 @@ class Calculator:
 
     def reset(self, third):
         self.third = third
+    @staticmethod
+    def main():
+        c = Calculator(int(input('첫번째 수 입력: ')), int(input('두번째 수 입력: ')))
+        print(f'{c.first} + {c.second} = {c.add()}')
+
 
 class adCal(Calculator):
     def __init__(self, first, second):
         self.first = first
         self.second = second
-
+'''
 if __name__ == '__main__':
     c = Calculator(1,2)
     print(c.first)
@@ -55,4 +60,5 @@ if __name__ == '__main__':
     print(c.div())
     print(c.third)
     c.reset(44)
-    print(c.third)
+    print(c.third)'''
+Calculator.main()

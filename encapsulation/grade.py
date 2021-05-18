@@ -1,21 +1,24 @@
 class Grade:
-    (kor, eng, math) = (0, 0, 0)
-
-    def set_grade(self, kor, eng, math):
+    def __int__(self, kor, eng, math):
         self.kor = kor
         self.eng = eng
         self.math = math
 
-    def sum(self):
-        return self.kor + self.eng + self.math
+    '''
+    동일한 구조로 다른 클래스명은 되는데, Grade가 생성시 takes no arguments...  뭔가 내부에서 꼬인 것 같다.
+    @staticmethod
+    def sum():
+        g = Grade(100, 100, 97)
+        print(g.kor + g.eng + g.math)
 
-    def avg(self):
-        return self.sum() / 3
+    @staticmethod
+    def sum():
+        g = Grade(int(input('국어 점수: ')), int(input('영어 점수: ')), int(input('수학 점수: ')))
+        return g.kor + g.eng + g.math
 
-if __name__ == '__main__':
-    g = Grade()
-    g.set_grade(100, 100, 97)
-    print(g.sum())
-    h = Grade()
-    print(h.sum())
-    print(g.avg())
+    @staticmethod
+    def avg():
+        g = Grade(100, 100, 97)
+        return g.kor + g.eng + g.math / 3
+'''
+
