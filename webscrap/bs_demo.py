@@ -10,10 +10,9 @@ class BsDemo(object):
     @staticmethod
     def main():
         while True:
-            menu = int(input('-Input\t\t\t1\n-Read\t\t\t2\n-Read title\t\t3\n-Exit\t\t\t0'))
+            menu = int(input('-Input\t\t\t1\n-Read all\t\t2\n-Read title\t\t3\n-Exit\t\t\t0'))
             if menu == 1:
-                bsd = BsDemo()
-                bsd.html_doc = """<html><head><title>The Dormouse's story</title></head>
+                BsDemo.html_doc = """<html><head><title>The Dormouse's story</title></head>
                                 <body>
                                 <p class="title"><b>The Dormouse's story</b></p>
                                 
@@ -26,10 +25,10 @@ class BsDemo(object):
                                 <p class="story">...</p>
                                 """
             elif menu == 2:
-                soup = BeautifulSoup(bsd.html_doc, 'html.parser')
+                soup = BeautifulSoup(BsDemo.html_doc, 'html.parser')
                 print(soup.prettify())
             elif menu == 3:
-                soup = BeautifulSoup(bsd.html_doc, 'html.parser')
+                soup = BeautifulSoup(BsDemo.html_doc, 'html.parser')
                 print(soup.find_all('a'))
             elif menu == 0:
                 break
