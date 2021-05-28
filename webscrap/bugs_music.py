@@ -13,7 +13,7 @@ class BugsMusic(object):
             rank = int(link.find('div', {'class': 'ranking'}).find('strong').text) - 1
             BugsMusic.rank_dict[rank] = (link.find('p', {'class': 'artist'})
                                          .find('a').text, link.find('p', {'class': 'title'}).find('a').text)
-        if len(BugsMusic.rank_dict) == 100:
+        if len( t) == 100:
             print('100위까지 차트를 읽어왔습니다.')
         else:
             print('다시 시도해주세요.')
